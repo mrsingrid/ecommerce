@@ -1,6 +1,14 @@
+import ProductCard from "./components/ProductCard";
+import { PRODUCTS } from "./products.js";
 
 function App() {
-  return <h1>Olá Mundo!</h1>
+  return (
+    <>
+      {PRODUCTS.map((product: any) => (
+        <ProductCard key={product.id} {...product} />
+      ))}
+    </>
+  );
 }
 
-export default App
+export default App;
