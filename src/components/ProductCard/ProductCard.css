@@ -17,7 +17,7 @@
     }
 
     .product-title {
-      color: #e34c3e;
+      color: #d94b3d;
     }
   }
 }
@@ -85,7 +85,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #e34c3e;
+    background-color: #d94b3d;
     .icon-plus {
       color: #fff;
     }
@@ -93,6 +93,6 @@
 }
 
 .icon-plus {
-  color: #e34c3e;
+  color: #d94b3d;
   transition: color 0.3s ease;
 }

@@ -20,7 +20,7 @@ header {
 
 .logo-image {
   display: block;
-  height: 60px;
+  height: 90px;
   width: auto;
   border-radius: 12px;
 }
@@ -44,7 +44,7 @@ header button,
 header button:hover,
 .header-icon:hover,
 .action-link:hover {
-  color: #e34c3e;
+  color: #d94b3d;
   background-color: #f5f5f5;
 }
 
