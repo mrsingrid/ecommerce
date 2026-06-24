@@ -1,12 +1,30 @@
 import { FaBars, FaRegUser } from "react-icons/fa6";
 import { FiShoppingBag } from "react-icons/fi";
 import "./Header.css";
+import { useState } from "react";
+import SidebarMenu from "../SidebarMenu/SidebarMenu";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function openMenu() {
+    setIsMenuOpen(true);
+  }
+
+  function closeMenu() {
+    setIsMenuOpen(false);
+  }
+
   return (
     <header>
-      <button type="button" aria-label="Open navigation menu">
-        <FaBars className="header-icon" aria-hidden="true" />
+      <button
+        type="button"
+        aria-label="Open navigation menu"
+        onClick={openMenu}
+        aria-expanded={isMenuOpen}
+        aria-controls="sidebar-menu"
+      >
+        <FaBars className="header-icon" aria-hidden="true" focusable="false" />
       </button>
 
       <div className="header-brand">
@@ -35,6 +53,8 @@ function Header() {
           <FiShoppingBag className="header-icon" aria-hidden="true" />
         </button>
       </div>
+
+      <SidebarMenu isOpen={isMenuOpen} onClose={closeMenu} />
     </header>
   );
 }
